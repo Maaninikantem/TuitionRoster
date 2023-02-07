@@ -1,2 +1,6 @@
-package Students;public class Standing {
+package Students;
+
+public enum Standing {
+    Freshman, Sophomore, Junior, Senior;
+
 }

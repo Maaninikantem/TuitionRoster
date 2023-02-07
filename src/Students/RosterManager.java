@@ -1,2 +1,4 @@
-package Students;public class RosterManager {
+package Students;
+
+public class RosterManager {
 }

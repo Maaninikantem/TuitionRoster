@@ -1,2 +1,7 @@
-package Students;public class RunProject1 {
+package Students;
+
+public class RunProject1 {
+    public static void main(String[] args) {
+        new RosterManager().run();
+    }
 }
