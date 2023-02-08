@@ -1,6 +1,6 @@
 package Students;
 
-public class Student {
+public class Student implements Comparable<Student>{
     private Profile profile;
     private Major major; //Major is an enum type
     private int creditCompleted;
@@ -31,6 +31,10 @@ public class Student {
 
     public Profile getProfile() {
         return profile;
+    }
+
+    public Major getMajor(){
+        return major;
     }
     public int getCreditCompleted() {
         return creditCompleted;
