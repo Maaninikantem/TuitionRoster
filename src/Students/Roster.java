@@ -110,6 +110,7 @@ public class Roster {
     }
 
 
+    /**
     public void sortByStanding() {
         for (int i = 0; i < size - 1; i++) {
             int minIndex = i;
@@ -123,6 +124,31 @@ public class Roster {
             roster[i] = temp;
         }
     }
+**/
+    public void sortByStanding() {
+        int n = size;
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (roster[j].getStanding().compareTo(roster[minIndex].getStanding()) < 0) {
+                    minIndex = j;
+                }
+            }
+            Student temp = roster[minIndex];
+            roster[minIndex] = roster[i];
+            roster[i] = temp;
+        }
+    }
+    public void printBySchool(String school) {
+        for (int i = 0; i < size; i++) {
+            Student s = roster[i];
+            if (s.getMajor().equals(school)) {
+                System.out.println(s.toString());
+            }
+        }
+    }
+
+
 
 }
     //Note that the Student class must implement the Comparable interface in order to sort the array of students.

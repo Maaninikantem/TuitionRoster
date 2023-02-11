@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89c35f3b-85c1-488b-b886-b1eba413948e" name="Changes" comment="initial commit">
+    <list default="true" id="89c35f3b-85c1-488b-b886-b1eba413948e" name="Changes" comment="second commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Students/Major.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Major.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Students/Roster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Roster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Students/RosterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/RosterManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Students/RunProject1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/RunProject1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Students/Standing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Students/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +33,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2LOOSTE8hhAq96W1CMRC40jKISu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -57,7 +63,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675805050907</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="second commit">
+      <created>1675899487354</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675899487354</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,6 +86,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
   </component>
 </project>

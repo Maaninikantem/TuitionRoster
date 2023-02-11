@@ -22,7 +22,7 @@ public enum Major {
 
     public String toString() {
 
-        return SCHOOL + CODE;
+        return SCHOOL + " : " +  CODE;
 
     }
 }
