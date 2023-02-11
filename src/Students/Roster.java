@@ -109,22 +109,6 @@ public class Roster {
         }
     }
 
-
-    /**
-    public void sortByStanding() {
-        for (int i = 0; i < size - 1; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < size; j++) {
-                if (roster[j].getCreditCompleted() < roster[minIndex].getCreditCompleted()) {
-                    minIndex = j;
-                }
-            }
-            Student temp = roster[minIndex];
-            roster[minIndex] = roster[i];
-            roster[i] = temp;
-        }
-    }
-**/
     public void sortByStanding() {
         int n = size;
         for (int i = 0; i < n - 1; i++) {
@@ -154,40 +138,3 @@ public class Roster {
     //Note that the Student class must implement the Comparable interface in order to sort the array of students.
 
 
-/**
-
- public void print () {
- sort();
- for (int i = 0; i < size; i++) {
- System.out.println(roster[i]);
- }
- } //print roster sorted by profiles
-
- //check the sorting algorithms adn implement them correclty,
- public void printBySchoolMajor() {
- sortBySchoolMajor();
- for (int i = 0; i < size; i++) {
- System.out.println(roster[i]);
- }
- }//print roster sorted by school major
- public void printByStanding() {
- sortByStanding();
- for (int i = 0; i < size; i++) {
- System.out.println(roster[i]);
- }
- } //print roster sorted by standing
-
- //below is a sorting algorithm for sorting roster by profiles
- private void sort() {
- for (int i = 0; i < size - 1; i++) {
- int minIndex = i;
- for (int j = i + 1; j < size; j++) {
- if (roster[j].compareTo(roster[minIndex]) < 0) {
- minIndex = j;
- }
- }
- swap(i, minIndex);
- }
- }
- }
- **/

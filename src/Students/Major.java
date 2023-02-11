@@ -19,6 +19,9 @@ public enum Major {
     public String getDeptCode(){
         return CODE;
     }
+    public void setMajor(String major){
+
+    }
 
     public String toString() {
 

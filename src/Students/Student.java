@@ -5,12 +5,15 @@ public class Student implements Comparable<Student> {
     private Major major; //Major is an enum type
     private int creditCompleted;
 
-    /**
-     * public Student() throws Exception
-     * {
-     * this(new Profile("First Name", "Last Name", Date('10/7/2003')), Major.CS, 80);
-     * }
-     **/
+
+
+
+    public Student(Profile profile){
+        this.profile = profile;
+    }
+    public Student(Profile profile, Major major){
+        this.profile = profile;
+    }
     public Student(Profile profile, String major, int creditCompleted) throws Exception {
         this.profile = profile;
         this.creditCompleted = creditCompleted;

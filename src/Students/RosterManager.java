@@ -126,6 +126,7 @@ public class RosterManager {
     }
 
 **/
+
 }
 
     private void addStudent(String command) throws Exception {
@@ -158,25 +159,56 @@ public class RosterManager {
     private void removeStudent(String command) throws Exception {
 
         String[] commandList = command.split(" ");
-        if(commandList.length > 4) {
-            System.out.println("This command takes only 3 arguments!");
+        final int NUM = 4;
+        if(commandList.length > NUM) {
+            System.out.println("This command takes only 4 arguments!");
         }
         String firstName = commandList[1];
         String lastName = commandList[2];
         String dob = commandList[3];
-
-        Profile profile = new Profile(lastName, firstName, dob);
-        Student student = new Student(profile, null, 0);
-
-        if (roster.contains(student)) {
+        Date date = new Date(dob);
+        if(!date.isValid()){
+            System.out.println("The date given is not valid!");
             return;
         }
-        boolean success = roster.add(student);
+
+        Profile profile = new Profile(lastName, firstName, dob);
+        Student student = new Student(profile);
+        Boolean found = roster.contains(student);
+
+        if (found == true) {
+            return;
+        }
+        boolean success = roster.remove(student);
         if (success) {
             System.out.println("Student removed successfully.");
         } else {
             System.out.println("Unable to remove student, no record found in the system");
         }
+    }
+
+    public void change(String command){
+        String[] commandList = command.split(" ");
+        if(commandList.length > 5) {
+            System.out.println("This command takes only 3 arguments!");
+        }
+        String fname = commandList[1];
+        String lname = commandList[2];
+        String dob = commandList[3];
+        Date date = new Date(dob);
+        if(!date.isValid()){
+            System.out.println("The date given is not valid!");
+            return;
+        }
+        Major major = Major.valueOf(commandList[4]);
+
+        Profile profile = new Profile(lname, fname, dob);
+        Student student = new Student(profile, major);
+
+        if (roster.contains(student)){
+
+        }
+
     }
 }
 
