@@ -17,7 +17,7 @@ public class Student implements Comparable<Student> {
     }
 
     public void setMajor(String major) throws Exception {
-        if (this.major == Major.CS) {
+        if (major.equals("CS") || major.equals("cS") || major.equals("Cs") || major.equals("cs")) {
             this.major = Major.CS;
         } else if (this.major == Major.ITI) {
             this.major = Major.ITI;
