@@ -22,13 +22,13 @@ public class Student implements Comparable<Student> {
     public void setMajor(String major) throws Exception {
         if (major.equals("CS") || major.equals("cS") || major.equals("Cs") || major.equals("cs")) {
             this.major = Major.CS;
-        } else if (this.major == Major.ITI) {
+        } else if (major.equals("ITI") || major.equals("Iti") || major.equals("iti") || major.equals("ITi")) {
             this.major = Major.ITI;
-        } else if (this.major == Major.BAIT) {
+        } else if (major.equals("BAIT") || major.equals("Bait") || major.equals("BAit") || major.equals("BAIt")) {
             this.major = Major.BAIT;
-        } else if (this.major == Major.EE) {
+        } else if (major.equals("EE") || major.equals("eE") || major.equals("Ee") || major.equals("ee")) {
             this.major = Major.EE;
-        } else if (this.major == Major.Math) {
+        } else if (major.equals("MATH") || major.equals("math") || major.equals("Math") || major.equals("MAth")) {
             this.major = Major.Math;
         } else {
             throw new Exception("'" + major + "' is not a valid major.");
@@ -66,12 +66,12 @@ public class Student implements Comparable<Student> {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Student student = (Student) obj;
-        return profile.equals(student.profile);
+    public boolean equals(Object obj)
+    {
+        Student s = (Student)obj;
+        return (this.getProfile().equals(obj)  && this.creditCompleted == s.getNumCredits());
     }
+
 
     @Override
     public int compareTo(Student other) {

@@ -56,9 +56,9 @@ public class RosterManager {
                 case "PS":
                     roster.printByStanding();
                     break;
-                //case "C":
-                 //   change(command);
-                  //  break;
+                case "C":
+                    change(command);
+                    break;
                // case "L":
                  //   ListProfileinSchool(command);
                   //  break;
@@ -69,64 +69,6 @@ public class RosterManager {
 
         scan.close();
         System.out.println("Roster Manager session has ended.");
-
-
-
-
-/**
-        private void remove(String command) {
-            commandList = command.split(" ");
-            if (commandList.length != 3) {
-                System.out.println("Invalid number of tokens for remove command");
-                return;
-            }
-
-            String firstName = commandList[1];
-            String lastName = commandList[2];
-            String dob = commandList[3];
-
-            Profile profile = new Profile(lastName, firstName, dob);
-            Student student = new Student(profile);
-            int index = roster.contains(student);
-
-            if (index == Roster.NOT_FOUND) {
-                System.out.println("Student not found in roster");
-                return;
-            }
-
-            roster.remove(student);
-            System.out.println("Student removed from roster");
-        }
-
-
-
-
-        private void change(String command) throws Exception {
-            String[] commands = command.split(" ");
-            if (commands.length != 4) {
-                System.out.println("Invalid command format for change major!");
-                return;
-            }
-            String firstName = commands[1];
-            String lastName = commands[2];
-            String dob = commands[3];
-            String newMajor = commands[4];
-
-            Student student = roster.find(firstName, lastName, dob);
-            if (student == null) {
-                System.out.println("Student not found!");
-                return;
-            }
-            student.setMajor(newMajor);
-            System.out.println("Successfully changed the major of " + firstName + " " + lastName + " to " + newMajor);
-        }
-
-
-
-    }
-
-**/
-
 }
 
     private void addStudent(String command) throws Exception {
@@ -196,6 +138,7 @@ public class RosterManager {
         String lname = commandList[2];
         String dob = commandList[3];
         Date date = new Date(dob);
+        /**
         if(!date.isValid()){
             System.out.println("The date given is not valid!");
             return;

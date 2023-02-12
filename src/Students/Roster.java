@@ -4,9 +4,11 @@ public class Roster {
     private Student[] roster;
     private int size;
     public static final int NOT_FOUND = -1;
+    public static final int DEFAULT_SIZE = 4;
+    public static final int GROW_SIZE = 4;
 
     public Roster() {
-        roster = new Student[4];
+        roster = new Student[DEFAULT_SIZE];
         size = 0;
     }
 
@@ -21,7 +23,7 @@ public class Roster {
 
     //change this method below
     private void grow() {
-        Student[] arr = new Student[roster.length + 4];
+        Student[] arr = new Student[roster.length + GROW_SIZE];
         for (int i = 0; i < size; i++) {
             arr[i] = roster[i];
         }
@@ -61,12 +63,24 @@ public class Roster {
 
         return find(student) != NOT_FOUND;
     } //if the student is in roster
-    public void print() {
-        sortByProfile();
-        for (int i = 0; i < size; i++) {
-            System.out.println(roster[i].toString());
+    public String print()
+    {
+        String print = "";
+        if (size == 0)
+            print += "Student roster is empty!\n";
+        else
+        {
+            print += "* list of students in the roster **\n";
+            for (int i = 0; i < size; i++)
+            {
+                print += roster[i].toString() + "\n";
+            }
+            print += "* end of roster **\n";
         }
+
+        return print;
     }
+
     //print out the roster sorted out by the profile
     public void printBySchoolMajor() {
         for (int i = 0; i < size; i++) {
