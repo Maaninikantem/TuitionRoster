@@ -41,25 +41,25 @@ public class RosterManager {
 
             if (commandList[0].equals("Q")) break;
             switch (commandList[0]) {
-                case "A":
+                case "A"://working
                     addStudent(command);
                     break;
-                case "R":
+                case "R"://not working
                     removeStudent(command);
                     break;
                 case "P":
                     roster.print();
                     break;
-                case "PC":
+                case "PC"://not working
                     roster.printBySchoolMajor();
                     break;
-                case "PS":
+                case "PS"://working
                     roster.printByStanding();
                     break;
-                case "C":
+                case "C"://working but need ot print new major
                     change(command);
                     break;
-               // case "L":
+               // case "L"://not implemented
                  //   ListProfileinSchool(command);
                   //  break;
                 default:
@@ -109,10 +109,12 @@ public class RosterManager {
         String lastName = commandList[2];
         String dob = commandList[3];
         Date date = new Date(dob);
+        /**
         if(!date.isValid()){
             System.out.println("The date given is not valid!");
             return;
         }
+         **/
 
         Profile profile = new Profile(lastName, firstName, dob);
         Student student = new Student(profile);
@@ -138,12 +140,10 @@ public class RosterManager {
         String lname = commandList[2];
         String dob = commandList[3];
         Date date = new Date(dob);
-        /**
-        if(!date.isValid()){
-            System.out.println("The date given is not valid!");
-            return;
-        }
-        Major major = Major.valueOf(commandList[4]);
+
+
+
+        Major major = Major.valueOf(m);
 
         Profile profile = new Profile(lname, fname, dob);
         Student student = new Student(profile, major);

@@ -63,19 +63,21 @@ public class Roster {
 
         return find(student) != NOT_FOUND;
     } //if the student is in roster
-    public String print()
+    public String print()//printing by the porfile in order
+            //No helper method needed so far
     {
         String print = "";
+
         if (size == 0)
             print += "Student roster is empty!\n";
         else
         {
-            print += "* list of students in the roster **\n";
+            print += "* Student roster sorted by last name, first name, DOB ** ";
             for (int i = 0; i < size; i++)
             {
                 print += roster[i].toString() + "\n";
             }
-            print += "* end of roster **\n";
+            print += "* end of Roster **";
         }
 
         return print;
@@ -83,6 +85,9 @@ public class Roster {
 
     //print out the roster sorted out by the profile
     public void printBySchoolMajor() {
+        // PC
+        //printing by the major's order
+
         for (int i = 0; i < size; i++) {
             for (int j = i + 1; j < size; j++) {
                 int comparison = roster[i].getMajor().compareTo(roster[j].getMajor());
@@ -96,34 +101,32 @@ public class Roster {
                 }
             }
         }
-        System.out.println("Roster sorted by School Major: ");
+        System.out.println("* Student roster sorted by school, major **");
         for (int i = 0; i < size; i++) {
             System.out.println(roster[i].getProfile().getLastName() + "," + roster[i].getProfile().getFirstName() + "," + roster[i].getProfile().getDOB().toString() + "," + roster[i].getMajor() + "," + roster[i].getMajor() + "," + roster[i].getStanding());
         }
+        System.out.println("* end of Roster **");
+
+
+
+
     }
     //print the roster sorted by major
 
     public void printByStanding() {
+        //PS
+        //prints majors by their standing
         sortByStanding();
+        String print = "";
+        print += "* Student Roster sorted by Standing ** ";
         for (int i = 0; i < size; i++) {
             System.out.println(roster[i].toString());
         }
+        print += "* end of Roster **";
     }
     //print the roster sorted out by the standing
 
-    private void sortByProfile() {
-        for (int i = 1; i < size; i++) {
-            Student key = roster[i];
-            int j = i - 1;
-            while (j >= 0 && roster[j].compareTo(key) > 0) {
-                roster[j + 1] = roster[j];
-                j--;
-            }
-            roster[j + 1] = key;
-        }
-    }
-
-    public void sortByStanding() {
+    public void sortByStanding() {//helper method for printByStanding
         int n = size;
         for (int i = 0; i < n - 1; i++) {
             int minIndex = i;
@@ -137,18 +140,7 @@ public class Roster {
             roster[i] = temp;
         }
     }
-    public void printBySchool(String school) {
-        for (int i = 0; i < size; i++) {
-            Student s = roster[i];
-            if (s.getMajor().equals(school)) {
-                System.out.println(s.toString());
-            }
-        }
-    }
 
 
 
 }
-    //Note that the Student class must implement the Comparable interface in order to sort the array of students.
-
-
