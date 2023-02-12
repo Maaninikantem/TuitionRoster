@@ -47,8 +47,8 @@ public class RosterManager {
                 case "R"://not working
                     removeStudent(command);
                     break;
-                case "P":
-                    roster.print();
+                case "P"://working
+                    System.out.println(roster.print());
                     break;
                 case "PC"://not working
                     roster.printBySchoolMajor();
@@ -75,9 +75,13 @@ public class RosterManager {
 
         String[] commandList = command.split(" ");
         String firstName = commandList[1];
+        System.out.println("First: " + firstName);
         String lastName = commandList[2];
+        System.out.println("last: "+lastName);
         String dob = commandList[3];
+        System.out.println("dob "+dob);
         String major = commandList[4];
+        System.out.println("major "+major);
 
         int credits = Integer.parseInt(commandList[5]);
         Profile profile = new Profile(lastName, firstName, dob);
@@ -138,7 +142,8 @@ public class RosterManager {
         }
         String fname = commandList[1];
         String lname = commandList[2];
-        String dob = commandList[3];
+        String dob =  commandList[3];
+        String m = commandList[4];
         Date date = new Date(dob);
 
 
@@ -147,12 +152,17 @@ public class RosterManager {
 
         Profile profile = new Profile(lname, fname, dob);
         Student student = new Student(profile, major);
-
-        if (roster.contains(student)){
-
+        if(date.isValid() == false){
+            System.out.println("The date given is not valid!");
+            return;
         }
+        roster.change(student, m);
+        System.out.println("changed the student's major successfully!");
+        roster.printRoster();
+
+
+
 
     }
 }
-
 

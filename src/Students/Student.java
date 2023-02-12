@@ -43,6 +43,8 @@ public class Student implements Comparable<Student> {
         return major;
     }
 
+    public int getNumCredits(){ return creditCompleted;}
+
     public String getCreditCompleted() {
         return getStanding();
     }
@@ -62,7 +64,7 @@ public class Student implements Comparable<Student> {
 
     @Override
     public String toString() {
-        return profile.toString() + "\t" + major.toString() + "\t" + creditCompleted + "\t" + getStanding();
+        return profile.toString() + "\t"  + creditCompleted + "\t" + getStanding();
     }
 
     @Override
@@ -91,6 +93,8 @@ public class Student implements Comparable<Student> {
         return major.compareTo(other.getMajor());
 
     }
+
+
 }
 
 

@@ -142,5 +142,31 @@ public class Roster {
     }
 
 
+//helper method for change command
+    public void change(Student s, String m){
+        for(int i = 0; i< roster.length; i++){
+            if (roster[i] != null) {
+                if(roster[i].equals(s)){
+                    try {
+                        roster[i].setMajor(m);
+                    }catch (Exception exe){
+                        System.out.println(exe.toString());
+                    }
+                }
+            }
+
+        }
+    }
+
+    public void printRoster(){
+        for(int i = 0; i< roster.length; i++) {
+            if (roster[i] != null) {
+                System.out.println(roster[i].toString());
+            }
+        }
+    }
+    public Student getStudent(int i){
+        return roster[i];
+    }
 
 }
