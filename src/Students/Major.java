@@ -16,6 +16,10 @@ public enum Major {
         CODE = School_code;
     }
 
+    public String getSchoolName(){
+        return SCHOOL;
+    }
+
     public String getDeptCode(){
         return CODE;
     }
@@ -23,7 +27,7 @@ public enum Major {
 
     public String toString() {
 
-        return SCHOOL + " : " +  CODE + name() ;
+        return "("+SCHOOL + " : " +  CODE+")";
 
     }
 

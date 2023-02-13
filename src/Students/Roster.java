@@ -72,7 +72,7 @@ public class Roster {
             print += "Student roster is empty!\n";
         else
         {
-            print += "* Student roster sorted by last name, first name, DOB ** ";
+            print += "* Student roster sorted by last name, first name, DOB **\n ";
             for (int i = 0; i < size; i++)
             {
                 print += roster[i].toString() + "\n";
@@ -101,7 +101,7 @@ public class Roster {
                 }
             }
         }
-        System.out.println("* Student roster sorted by school, major **");
+        System.out.println("* Student roster sorted by school, major **\n");
         for (int i = 0; i < size; i++) {
             System.out.println(roster[i].getProfile().getLastName() + "," + roster[i].getProfile().getFirstName() + "," + roster[i].getProfile().getDOB().toString() + "," + roster[i].getMajor() + "," + roster[i].getMajor() + "," + roster[i].getStanding());
         }
@@ -118,7 +118,7 @@ public class Roster {
         //prints majors by their standing
         sortByStanding();
         String print = "";
-        print += "* Student Roster sorted by Standing ** ";
+        print += "* Student Roster sorted by Standing **\n ";
         for (int i = 0; i < size; i++) {
             System.out.println(roster[i].toString());
         }

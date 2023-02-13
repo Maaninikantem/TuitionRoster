@@ -75,13 +75,18 @@ public class RosterManager {
 
         String[] commandList = command.split(" ");
         String firstName = commandList[1];
-        System.out.println("First: " + firstName);
+       // System.out.println("First: " + firstName);
         String lastName = commandList[2];
-        System.out.println("last: "+lastName);
+        //System.out.println("last: "+lastName);
         String dob = commandList[3];
-        System.out.println("dob "+dob);
+        //System.out.println("dob "+dob);
         String major = commandList[4];
-        System.out.println("major "+major);
+       // System.out.println("major "+major);
+        Date date = new Date(dob);
+        if(!date.isValid()){
+            System.out.println("The date given is not valid!");
+            return;
+        }
 
         int credits = Integer.parseInt(commandList[5]);
         Profile profile = new Profile(lastName, firstName, dob);
@@ -152,7 +157,7 @@ public class RosterManager {
 
         Profile profile = new Profile(lname, fname, dob);
         Student student = new Student(profile, major);
-        if(date.isValid() == false){
+        if(!date.isValid()){
             System.out.println("The date given is not valid!");
             return;
         }

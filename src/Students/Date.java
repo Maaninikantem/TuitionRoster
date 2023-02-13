@@ -1,226 +1,283 @@
 package Students;
-import java.util.StringTokenizer;
 import java.util.Calendar;
 
 /**
- * A class to create a Date, consisting of a month, day, and year.
- * Contains methods to check for validity and compare two dates to each other, along
- * with additional helper methods.
- * @author Maanini Kantem, Shreeya Karanam
- *
+ * Contains information about a single date.
+ * This includes the month, day of month, and year.
+ * Can determine if the date is a valid calendar date.
+ * @author Aaron Browne, Harshkumar Patel
  */
-public class Date implements Comparable<Date>{
+public class Date implements Comparable<Date>
+{
     private int year;
     private int month;
     private int day;
 
-    private static final int QUADRENNIAL = 4;
-    private static final int CENTENNIAL = 100;
-    private static final int QUATERCENTENNIAL = 400;
-
-    private static final int CURRENT_YEAR = 2021;
-
-    private static final int JANUARY = 1;
-    private static final int FEBRUARY = 2;
-    private static final int MARCH = 3;
-    private static final int APRIL = 4;
-    private static final int MAY = 5;
-    private static final int JUNE = 6;
-    private static final int JULY = 7;
-    private static final int AUGUST = 8;
-    private static final int SEPTEMBER = 9;
-    private static final int OCTOBER = 10;
-    private static final int NOVEMBER = 11;
-    private static final int DECEMBER = 12;
-
-    private static final int ODD_MONTHS = 31;
-    private static final int EVEN_MONTHS = 30;
-
-    private static final int FEB_DAYS = 28;
-    private static final int LEAPYR_FEB = 29;
-
     /**
-     * A constructor that creates a Date object with today's date.
+     * When given no arguments, the constructor creates an instance of date with the current date,
+     * as provided by Java's Calendar library.
      */
-    public Date() {
-        String todaysDate = Calendar.getInstance().getTime().toString();
-        StringTokenizer st = new StringTokenizer(todaysDate, " ");
-        st.nextToken();
-        month = getMonthNumber(st.nextToken());
-        day = Integer.parseInt(st.nextToken());
-        st.nextToken();
-        st.nextToken();
-        year = Integer.parseInt(st.nextToken());
+    public Date()
+    {
+        Calendar calendar = Calendar.getInstance();
+        this.month  = calendar.get(Calendar.MONTH);
+        this.year = calendar.get(Calendar.YEAR);
+        this.day = calendar.get(Calendar.DATE);
     }
 
     /**
-     * A constructor that creates a Date object given a String.
-     * @param date: a String that contains a date in mm/dd/yyyy format.
+     * When given a string, this constructor parses the string and creates an instance of date with it.
+     * @param date The date string in mm/dd/yyyy format.
      */
-    public Date(String date) {
-        StringTokenizer st = new StringTokenizer(date, "/");
-        month = Integer.parseInt(st.nextToken());
-        day = Integer.parseInt(st.nextToken());
-        year = Integer.parseInt(st.nextToken());
-    }
-
-    public Date(int month, int day, int year) {
-        this.month = month;
-        this.day = day;
-        this.year = year;
+    public Date(String date)
+    {
+        String[] dateElements = date.split("/");
+        month = Integer.parseInt(dateElements[0]);
+        day = Integer.parseInt(dateElements[1]);
+        year = Integer.parseInt(dateElements[2]);
     }
 
     /**
-     * A helper method that converts an abbreviated month name into its corresponding
-     * numerical value.
-     * @param monthName: a String containing an abbreviated name of a month.
-     * @return the corresponding numerical value for the given month.
+     * Creates a clone of the date provided.
+     * @param d The date to clone.
      */
-    private int getMonthNumber(String monthName) {
-        switch(monthName) {
-            case "Jan":
-                return JANUARY;
-            case "Feb":
-                return FEBRUARY;
-            case "Mar":
-                return MARCH;
-            case "Apr":
-                return APRIL;
-            case "May":
-                return MAY;
-            case "Jun":
-                return JUNE;
-            case "Jul":
-                return JULY;
-            case "Aug":
-                return AUGUST;
-            case "Sep":
-                return SEPTEMBER;
-            case "Oct":
-                return OCTOBER;
-            case "Nov":
-                return NOVEMBER;
-            case "Dec":
-                return DECEMBER;
-            default:
-                return -1;
-        }
+    public Date(Date d)
+    {
+        this.month = d.getMonth();
+        this.day = d.getDay();
+        this.year = d.getYear();
     }
 
     /**
-     * A method to check if the current Date object represents a valid date.
-     * In order for a date to be valid, the year must be equal to the current
-     * year. The day must be a valid day within the corresponding month, taking leap years
-     * into account. The date also cannot be after the current date.
-     * @return true if the Date object satisfies the above criteria, false otherwise.
+     * Creates an instance of Date with the month, day and year provided.
+     * @param m The month.
+     * @param d The day of the month.
+     * @param y The year.
      */
-    public boolean isValid() {
-        Date todaysDate = new Date();
-        if(this.month < JANUARY || this.month > DECEMBER) {
-            return false;
+    public Date(int m, int d, int y)
+    {
+        this.month = m;
+        this.day = d;
+        this.year = y;
+    }
+
+    /**
+     * Returns the day of the month
+     * @return The day of the month
+     */
+    public int getDay()
+    {
+        int d = this.day;
+        return d;
+    }
+
+    /**
+     * Returns the month.
+     * @return The month.
+     */
+    public int getMonth()
+    {
+        int m = this.month;
+        return m;
+    }
+
+    /**
+     * Returns the year.
+     * @return The year.
+     */
+    public int getYear()
+    {
+        int y = this.year;
+        return y;
+    }
+
+    /**
+     * Changes the day of the month.
+     * @param d The new day of the month.
+     */
+    public void setDay(int d)
+    {
+        this.day = d;
+    }
+
+    /**
+     *  Changes the month.
+     * @param m The new month.
+     */
+    public void setMonth(int m)
+    {
+        this.month = m;
+    }
+
+    /**
+     * Changes the year.
+     * @param y The new year.
+     */
+    public void setYear(int y)
+    {
+        this.year = y;
+    }
+
+    /**
+     * Determines whether or not the date is a valid calendar date.
+     * Does not allow years before 1900 or after the current one.
+     * Takes into account the amount of days of different months and leap years.
+     * @return true if the date is valid, false if not.
+     */
+    public boolean isValid()
+    {
+        final int TOTAL_MONTH = 12;
+        final int MIN_MONTH = 1;
+        final int TOTAL_FEB_DAYS = 28;
+        final int TOTAL_FEB_LEAP_DAYS = 29;
+        final int TOTAL_AJSN_DAYS = 30; //AJSN = April, June, September, and November
+        final int TOTAL_MONTH_DAYS = 31;
+        boolean leapYear = isLeapYear(year);
+        Calendar today = Calendar.getInstance();
+
+        if(year < 1900 || year > today.get(Calendar.YEAR)) return false;
+
+        if(month > TOTAL_MONTH || month < MIN_MONTH) return false;
+
+        if(day < 1) return false;
+        if(month == Month.FEB)
+        {
+            if(leapYear)
+            {
+                if(day > TOTAL_FEB_LEAP_DAYS) return false;
+            } else
+            {
+                if(day > TOTAL_FEB_DAYS) return false;
+            }
+        } else if(month == Month.APR || month  == Month.JUN || month == Month.SEP || month == Month.NOV) //MONTHS WITH 30 DAYS
+        {
+            if(day > TOTAL_AJSN_DAYS) return false;
+        } else  //MONTHS WITH 31 DAYS
+        {
+            if(this.day > TOTAL_MONTH_DAYS) return false;
         }
-        if(this.year != CURRENT_YEAR || this.compareTo(todaysDate) > 0) {
-            return false;
-        }
-        if(!this.validNumDays()) {
-            return false;
-        }
+
         return true;
     }
 
     /**
-     * A helper method to check if the day field is valid for the current Date object
-     * (i.e. checks if the day is lower or higher than possible for the corresponding month).
-     * @return true if the day is valid, false otherwise.
+     * Determines whether or not the given year is a leap year.
+     * @param y The year to analyze.
+     * @return true if the year is a leap year, false if not.
      */
-    private boolean validNumDays() {
-        if(this.day <= 0) {
-            return false;
-        }
-        if(this.month == JANUARY || this.month == MARCH || this.month == MAY
-                || this.month == JULY || this.month == AUGUST || this.month == OCTOBER
-                || this.month == DECEMBER) {
-            if(this.day <= ODD_MONTHS) {
-                return true;
-            } return false;
-        }
-        else if(this.month == APRIL || this.month == JUNE || this.month == SEPTEMBER
-                || this.month == NOVEMBER) {
-            if(this.day <= EVEN_MONTHS) {
-                return true;
-            } return false;
-        }
-        else {
-            if(isLeapYear(this.year)) {
-                if(this.day <= LEAPYR_FEB) {
+    private boolean isLeapYear(int y)
+    {
+        final int QUADRENNIAL = 4;
+        final int CENTENNIAL = 100;
+        final int QUATERCENTENNIAL = 400;
+        if(y % QUADRENNIAL == 0)
+        {
+            if(y % CENTENNIAL == 0)
+            {
+                if(y % QUATERCENTENNIAL == 0)
+                {
                     return true;
-                } return false;
-            } else {
-                if(this.day <= FEB_DAYS) {
-                    return true;
-                } return false;
-            }
-        }
-    }
-
-    /**
-     * A helper method that checks if a given year is a leap year or not.
-     * @param year: a year expressed as an integer.
-     * @return true if the year is a leap year, false otherwise.
-     */
-    private static boolean isLeapYear(int year) {
-        if(year % QUADRENNIAL == 0) {
-            if(year % CENTENNIAL == 0) {
-                if(year % QUATERCENTENNIAL == 0) {
-                    return true;
-                } else {
+                }else
+                {
                     return false;
                 }
-            } else {
+            }else
+            {
                 return true;
             }
-        } else {
+        }else
+        {
             return false;
         }
     }
 
     /**
-     * A method that compares two dates to each other.
-     * @param date: the Date object that you are comparing to the current Date object.
-     * @return 0 if the two dates are the same, -1 if the current Date object is earlier
-     * than the date argument, and 1 if the current Date object is later than the date argument.
+     * Determine whether two dates are equal.
+     * @param date The date to compare against.
+     * @return true if the dates are equal, false if not.
      */
-    @Override
-    public int compareTo(Date date) {
-        if(this.year < date.year) {
-            return -1;
-        } else if(this.year > date.year) {
-            return 1;
-        } else { //same year
-            if(this.month < date.month) {
-                return -1;
-            } else if(this.month > date.month) {
-                return 1;
-            } else {
-                if(this.day > date.day) {
-                    return 1;
-                } else if(this.day < date.day) {
-                    return -1;
-                } else { //must be the same date
-                    return 0;
-                }
-            }
-        }
+    public boolean equals(Date date)
+    {
+        return compareTo(date) == 0;
     }
 
     /**
-     * Represents a Date object as a String.
-     * Executes when a Date object is printed to the screen.
-     * @return a String that represents the date in mm/dd/yyyy format.
+     * Compares two dates.
+     * @param date The date to compare the current one to.
+     * @return 1 if the current date occurs after the given one, -1 if the current date occurs before, and 0 if the the dates are the same.
      */
-    @Override //double check that i can do this for this class
-    public String toString() {
-        return this.month + "/" + this.day + "/" + this.year;
+    @Override
+    public int compareTo(Date date)
+    {
+        if(year > date.getYear()) return 1;
+        else if(year < date.getYear()) return -1;
+        if(month > date.getMonth()) return 1;
+        else if(month < date.getMonth()) return -1;
+        if(day > date.getDay()) return 1;
+        else if(day < date.getDay()) return -1;
+        return 0;
     }
 
+    /**
+     * Converts the date into a string
+     * @return A string representation of the date in mm/dd/yyyy format.
+     */
+    public String toString()
+    {
+        return month + "/" + day + "/" + year;
+    }
+
+    /**
+     * Tries a series of tests to make sure if isValid() function works.
+     * All the tests should return false except for the last one.
+     * @param args
+     */
+    public static void main(String[] args)
+    {
+        Date d;
+
+        //test case 1
+        d = new Date("5/22/1883");
+        System.out.println(d.isValid());
+
+        //test case 2
+        d = new Date("16/3/1984");
+        System.out.println(d.isValid());
+
+        //test case 3
+        d = new Date("0/15/2002");
+        System.out.println(d.isValid());
+
+        //test case 4
+        d = new Date("2/29/1993");
+        System.out.println(d.isValid());
+
+        //test case 5
+        d = new Date("2/-1/1993");
+        System.out.println(d.isValid());
+
+        //test case 6
+        d = new Date("2/31/1984");
+        System.out.println(d.isValid());
+
+        //test case 7
+        d = new Date("6/31/2000");
+        System.out.println(d.isValid());
+
+        //test case 8
+        d = new Date("6/0/2000");
+        System.out.println(d.isValid());
+
+        //test case 9
+        d = new Date("12/500/1994");
+        System.out.println(d.isValid());
+
+        //test case 10
+        d = new Date("12/0/1994");
+        System.out.println(d.isValid());
+
+        //test case 11
+        d = new Date("3/3/2019");
+        System.out.println(d.isValid());
+    }
 }

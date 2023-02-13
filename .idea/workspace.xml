@@ -7,16 +7,9 @@
     <list default="true" id="89c35f3b-85c1-488b-b886-b1eba413948e" name="Changes" comment="updated commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Students/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Date.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Students/Major.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Major.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Students/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Students/Roster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Roster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Students/RosterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/RosterManager.java" afterDir="false" />
     </list>
-    <list id="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" name="Changes by harshpatel" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Students/Roster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Roster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Students/RosterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/RosterManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Students/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Student.java" afterDir="false" />
-    </list>
+    <list id="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" name="Changes by harshpatel" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,49 +25,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Students/RosterManager.java">
-      <ranges>
-        <range start1="43" end1="44" start2="43" end2="44" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="46" end1="47" start2="46" end2="47" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="49" end1="51" start2="49" end2="51" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
-        <range start1="52" end1="53" start2="52" end2="53" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="55" end1="56" start2="55" end2="56" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="58" end1="59" start2="58" end2="59" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="61" end1="62" start2="61" end2="62" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="77" end1="77" start2="77" end2="78" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
-        <range start1="78" end1="78" start2="79" end2="80" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
-        <range start1="79" end1="79" start2="81" end2="82" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
-        <range start1="80" end1="80" start2="83" end2="84" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
-        <range start1="111" end1="111" start2="115" end2="116" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="115" end1="115" start2="120" end2="121" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="138" end1="139" start2="144" end2="146" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
-        <range start1="140" end1="146" start2="147" end2="151" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="149" end1="149" start2="154" end2="161" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
-        <range start1="150" end1="151" start2="162" end2="162" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
-        <range start1="152" end1="153" start2="163" end2="164" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
-        <range start1="158" end1="159" start2="169" end2="169" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/Students/Roster.java">
-      <ranges>
-        <range start1="65" end1="66" start2="65" end2="67" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="68" end1="68" start2="69" end2="70" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="72" end1="73" start2="74" end2="75" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="77" end1="78" start2="79" end2="80" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="85" end1="85" start2="87" end2="90" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="98" end1="99" start2="103" end2="104" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="102" end1="102" start2="107" end2="112" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="106" end1="106" start2="116" end2="118" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="107" end1="107" start2="119" end2="121" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="110" end1="110" start2="124" end2="125" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="113" end1="126" start2="128" end2="129" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="139" end1="147" start2="142" end2="142" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-        <range start1="149" end1="149" start2="144" end2="170" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
-        <range start1="151" end1="154" start2="172" end2="172" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -145,7 +95,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676176637103</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="updated commit">
+      <created>1676239790189</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676239790189</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Changes">
+      <created>1676239837677</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676239837677</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,6 +127,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="second commit" />
     <MESSAGE value="updated commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated commit" />
+    <MESSAGE value="Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
   </component>
 </project>
