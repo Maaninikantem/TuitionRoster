@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89c35f3b-85c1-488b-b886-b1eba413948e" name="Changes" comment="updated commit">
+    <list default="true" id="89c35f3b-85c1-488b-b886-b1eba413948e" name="Changes" comment="Commit pre_comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Students/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Students/Major.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Major.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Students/RosterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/RosterManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Students/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Student.java" afterDir="false" />
     </list>
-    <list id="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" name="Changes by harshpatel" comment="Changes" />
+    <list id="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" name="Changes by harshpatel" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/src/Students/Major.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Major.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Students/RosterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/RosterManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Students/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students/Student.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +30,49 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/Students/RosterManager.java">
+      <ranges>
+        <range start1="43" end1="44" start2="43" end2="44" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="46" end1="47" start2="46" end2="47" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="49" end1="50" start2="49" end2="50" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="52" end1="53" start2="52" end2="53" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="55" end1="56" start2="55" end2="56" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="58" end1="59" start2="58" end2="59" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="61" end1="64" start2="61" end2="64" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="77" end1="78" start2="77" end2="77" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="79" end1="80" start2="78" end2="78" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="81" end1="82" start2="79" end2="79" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="83" end1="84" start2="80" end2="80" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="120" end1="121" start2="116" end2="116" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="125" end1="126" start2="120" end2="121" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="141" end1="141" start2="136" end2="139" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="158" end1="159" start2="156" end2="157" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
+        <range start1="165" end1="166" start2="163" end2="165" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Students/Student.java">
+      <ranges>
+        <range start1="13" end1="14" start2="13" end2="14" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
+        <range start1="15" end1="15" start2="15" end2="30" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
+        <range start1="18" end1="18" start2="33" end2="47" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="42" end1="43" start2="71" end2="72" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="66" end1="67" start2="95" end2="96" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/Students/Major.java">
+      <ranges>
+        <range start1="4" end1="12" start2="4" end2="5" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="13" end1="17" start2="6" end2="10" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="18" end1="21" start2="11" end2="14" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="22" end1="24" start2="15" end2="30" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="25" end1="25" start2="31" end2="32" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="26" end1="26" start2="33" end2="36" changelist="aa9f8d92-5d60-4d72-98c0-2dd19be332e7" />
+        <range start1="27" end1="30" start2="37" end2="37" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+        <range start1="31" end1="34" start2="38" end2="38" changelist="89c35f3b-85c1-488b-b886-b1eba413948e" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,6 +92,40 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager" selected="Application.RunProject1">
+    <configuration name="RunProject1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Students.RunProject1" />
+      <module name="TuitionRoster" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Students.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Students.test" />
+      <module name="TuitionRoster" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Students.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RunProject1" />
+        <item itemvalue="Application.test" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -109,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676239837677</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updated commit">
+      <created>1676259697051</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676259697051</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,8 +215,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="second commit" />
-    <MESSAGE value="updated commit" />
     <MESSAGE value="Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
+    <MESSAGE value="updated commit" />
+    <MESSAGE value="Commit pre_comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit pre_comments" />
   </component>
 </project>

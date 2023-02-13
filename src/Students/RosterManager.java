@@ -41,27 +41,27 @@ public class RosterManager {
 
             if (commandList[0].equals("Q")) break;
             switch (commandList[0]) {
-                case "A"://working
+                case "A":
                     addStudent(command);
                     break;
-                case "R"://not working
+                case "R":
                     removeStudent(command);
                     break;
-                case "P"://working
+                case "P":
                     System.out.println(roster.print());
                     break;
-                case "PC"://not working
+                case "PC":
                     roster.printBySchoolMajor();
                     break;
-                case "PS"://working
+                case "PS":
                     roster.printByStanding();
                     break;
-                case "C"://working but need ot print new major
+                case "C":
                     change(command);
                     break;
-               // case "L"://not implemented
-                 //   ListProfileinSchool(command);
-                  //  break;
+               case "L":
+                 ListProfileinSchool(command);
+                  break;
                 default:
                     System.out.println("Invalid command!");
             }
@@ -75,13 +75,9 @@ public class RosterManager {
 
         String[] commandList = command.split(" ");
         String firstName = commandList[1];
-       // System.out.println("First: " + firstName);
         String lastName = commandList[2];
-        //System.out.println("last: "+lastName);
         String dob = commandList[3];
-        //System.out.println("dob "+dob);
         String major = commandList[4];
-       // System.out.println("major "+major);
         Date date = new Date(dob);
         if(!date.isValid()){
             System.out.println("The date given is not valid!");
@@ -118,12 +114,11 @@ public class RosterManager {
         String lastName = commandList[2];
         String dob = commandList[3];
         Date date = new Date(dob);
-        /**
         if(!date.isValid()){
             System.out.println("The date given is not valid!");
             return;
         }
-         **/
+
 
         Profile profile = new Profile(lastName, firstName, dob);
         Student student = new Student(profile);
@@ -138,6 +133,9 @@ public class RosterManager {
         } else {
             System.out.println("Unable to remove student, no record found in the system");
         }
+    }
+    private void ListProfileinSchool(String command){
+
     }
 
     public void change(String command){
@@ -163,7 +161,8 @@ public class RosterManager {
         }
         roster.change(student, m);
         System.out.println("changed the student's major successfully!");
-        roster.printRoster();
+
+
 
 
 

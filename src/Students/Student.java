@@ -11,11 +11,40 @@ public class Student implements Comparable<Student> {
     public Student(Profile profile){
         this.profile = profile;
     }
-    public Student(Profile profile, Major major){
+    public Student(Profile profile, String major){
         this.profile = profile;
+        if (major.equals("CS") || major.equals("cS") || major.equals("Cs") || major.equals("cs")) {
+            this.major = Major.CS;
+            //this.major = this.major;
+        } else if (major.equals("ITI") || major.equals("Iti") || major.equals("iti") || major.equals("ITi")) {
+            this.major = Major.ITI;
+        } else if (major.equals("BAIT") || major.equals("Bait") || major.equals("BAit") || major.equals("BAIt")) {
+            this.major = Major.BAIT;
+        } else if (major.equals("EE") || major.equals("eE") || major.equals("Ee") || major.equals("ee")) {
+            this.major = Major.EE;
+        } else if (major.equals("MATH") || major.equals("math") || major.equals("Math") || major.equals("MAth")) {
+            this.major = Major.Math;
+        } else {
+            //throw new Exception("'" + major + "' is not a valid major.");
+        };
+
     }
     public Student(Profile profile, String major, int creditCompleted) throws Exception {
         this.profile = profile;
+        if (major.equals("CS") || major.equals("cS") || major.equals("Cs") || major.equals("cs")) {
+            this.major = Major.CS;
+            //this.major = this.major;
+        } else if (major.equals("ITI") || major.equals("Iti") || major.equals("iti") || major.equals("ITi")) {
+            this.major = Major.ITI;
+        } else if (major.equals("BAIT") || major.equals("Bait") || major.equals("BAit") || major.equals("BAIt")) {
+            this.major = Major.BAIT;
+        } else if (major.equals("EE") || major.equals("eE") || major.equals("Ee") || major.equals("ee")) {
+            this.major = Major.EE;
+        } else if (major.equals("MATH") || major.equals("math") || major.equals("Math") || major.equals("MAth")) {
+            this.major = Major.Math;
+        } else {
+            //throw new Exception("'" + major + "' is not a valid major.");
+        };
         this.creditCompleted = creditCompleted;
     }
 
@@ -40,7 +69,7 @@ public class Student implements Comparable<Student> {
     }
 
     public Major getMajor() {
-        return major;
+        return this.major;
     }
 
     public int getNumCredits(){ return creditCompleted;}
@@ -64,7 +93,7 @@ public class Student implements Comparable<Student> {
 
     @Override
     public String toString() {
-        return profile.toString() + "\t"  + creditCompleted + "\t" + getStanding();
+        return profile.toString() + "\t" + major.toString() + creditCompleted + "\t" + getStanding();
     }
 
     @Override

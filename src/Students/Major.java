@@ -2,33 +2,37 @@ package Students;
 
 public enum Major {
 
-    CS("SAS","01:198"),
-    Math("SAS","01:640"),
-    BAIT("RBS", "33:136"),
-    ITI("SC&I","04:547"),
-    EE("SOE","14:332");
+    CS("CS"), ITI("ITI"), BAIT("BAIT"), EE("EE"), Math("Math");
 
-    final String SCHOOL;
-    final String CODE;
+        public  String major;
+        Major(String m){
+            this.major = m;
+        }
 
-    Major(String schoolname, String School_code){
-        SCHOOL = schoolname;
-        CODE = School_code;
+        public void setMajor(Major m){
+            this.major = m.major;
+        }
+
+        public String toString(){
+            String result = "";
+            if(this.major.equals("CS")){
+                result += "(SAS "+major+" 01:198) ";
+            }else if(this.major.equals("ITI")){
+                result += "(SC&I "+major+" 04:547) ";
+            }else if(this.major.equals("MATH")){
+                result += "(SAS "+major+" 01:640) ";
+            }else if(this.major.equals("BAIT")){
+                result += "(RBS "+major+" 33:136) ";
+            }else if(this.major.equals("EE")){
+                result += "(SOE "+major+" 14:332) ";
+            }
+            return result;
+        }
     }
 
-    public String getSchoolName(){
-        return SCHOOL;
-    }
-
-    public String getDeptCode(){
-        return CODE;
-    }
 
 
-    public String toString() {
 
-        return "("+SCHOOL + " : " +  CODE+")";
 
-    }
 
-}
+
