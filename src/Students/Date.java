@@ -2,11 +2,11 @@ package Students;
 import java.util.Calendar;
 
 /**
- * Contains information about a single date.
- * This includes the month, day of month, and year.
- * Can determine if the date is a valid calendar date.
- * @author Aaron Browne, Harshkumar Patel
+ * This date class serves to reference the invalid date functionality provided in the command list.
+ * It will allow for a reliable set of valid or accurate dates in order to prove roster credibility.
+ * @author Maanini Kantem, Shreeya Karanam
  */
+
 public class Date implements Comparable<Date>
 {
     private int year;
@@ -14,8 +14,7 @@ public class Date implements Comparable<Date>
     private int day;
 
     /**
-     * When given no arguments, the constructor creates an instance of date with the current date,
-     * as provided by Java's Calendar library.
+     * This Date() utilizes the Calendar library and validates dates according to the corresponding month, year, and date.
      */
     public Date()
     {
@@ -26,8 +25,8 @@ public class Date implements Comparable<Date>
     }
 
     /**
-     * When given a string, this constructor parses the string and creates an instance of date with it.
-     * @param date The date string in mm/dd/yyyy format.
+     * Below constructor utilizes parsing in order to generate an alternate date instance.
+     * @param date A specific date format is presented as per the standard month, date, and year.
      */
     public Date(String date)
     {
@@ -38,8 +37,8 @@ public class Date implements Comparable<Date>
     }
 
     /**
-     * Creates a clone of the date provided.
-     * @param d The date to clone.
+     * The purpose of the below function is to create an additional instance of the date to compare.
+     * @param d Duplicate
      */
     public Date(Date d)
     {
@@ -49,10 +48,10 @@ public class Date implements Comparable<Date>
     }
 
     /**
-     * Creates an instance of Date with the month, day and year provided.
-     * @param m The month.
-     * @param d The day of the month.
-     * @param y The year.
+     * Using the given three parameters consistent throughout, (month, day and year), instance created
+     * @param m m symbolizes month
+     * @param d d symbolizes day
+     * @param y y symbolizes year
      */
     public Date(int m, int d, int y)
     {
@@ -62,8 +61,8 @@ public class Date implements Comparable<Date>
     }
 
     /**
-     * Returns the day of the month
-     * @return The day of the month
+     * D, (day) of the specified month is the final return call
+     * @return Day of specified month
      */
     public int getDay()
     {
@@ -72,8 +71,8 @@ public class Date implements Comparable<Date>
     }
 
     /**
-     * Returns the month.
-     * @return The month.
+     * M, (month) of the specified year is the final return call
+     * @return Month of the specified year
      */
     public int getMonth()
     {
@@ -82,8 +81,8 @@ public class Date implements Comparable<Date>
     }
 
     /**
-     * Returns the year.
-     * @return The year.
+     * Y, (year) of the specified year is the final return call
+     * @return Year
      */
     public int getYear()
     {
@@ -92,8 +91,8 @@ public class Date implements Comparable<Date>
     }
 
     /**
-     * Changes the day of the month.
-     * @param d The new day of the month.
+     * Sets specific day to matched month
+     * @param d Specific day of month
      */
     public void setDay(int d)
     {
@@ -101,8 +100,8 @@ public class Date implements Comparable<Date>
     }
 
     /**
-     *  Changes the month.
-     * @param m The new month.
+     * Specifies specific month within year
+     * @param m Symbolizes month of year
      */
     public void setMonth(int m)
     {
@@ -110,8 +109,8 @@ public class Date implements Comparable<Date>
     }
 
     /**
-     * Changes the year.
-     * @param y The new year.
+     * Same method, specific to year
+     * @param y Year
      */
     public void setYear(int y)
     {
@@ -119,10 +118,11 @@ public class Date implements Comparable<Date>
     }
 
     /**
-     * Determines whether or not the date is a valid calendar date.
-     * Does not allow years before 1900 or after the current one.
-     * Takes into account the amount of days of different months and leap years.
-     * @return true if the date is valid, false if not.
+     *
+     * isValid(), as name specifies makes sure that the entered date is existent and a possible input
+     * Is able to process the possibility of leap years and year restrictions
+     * @return On the basis of a date following isValid(), returns yes (true) or no (false)
+     *
      */
     public boolean isValid()
     {
@@ -161,8 +161,8 @@ public class Date implements Comparable<Date>
     }
 
     /**
-     * Determines whether or not the given year is a leap year.
-     * @param y The year to analyze.
+     * As mentioned above, used to determine if it is a leap year
+     * @param y Year in question.
      * @return true if the year is a leap year, false if not.
      */
     private boolean isLeapYear(int y)
